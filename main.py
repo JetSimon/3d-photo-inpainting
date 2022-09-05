@@ -30,9 +30,6 @@ config = yaml.full_load(open(args.config, 'r'))
 if config['offscreen_rendering'] is True:
     vispy.use(app='egl')
 
-frames = int(input("How many frames do you want your video to have? (Default is 240): " or "240")
-config['num_frames'] = frames
-
 os.makedirs(config['mesh_folder'], exist_ok=True)
 os.makedirs(config['video_folder'], exist_ok=True)
 os.makedirs(config['depth_folder'], exist_ok=True)
